@@ -56,26 +56,24 @@ function touchdownHandler(e){
       jump_pressed = true;
     }
   }
-
 }
-function update(){
-  if( jump_pressed && velocity.y == 0){
-    velocity.y = 3.4 * BALL_SPEED;
-    jump_pressed = false;
-  }
+
+function touchmoveHandler(){
   if( joystick.up() ){
     velocity.z = -BALL_SPEED;
   }else if( joystick.down() ){
     velocity.z = BALL_SPEED;
-  }else{
-    velocity.z = 0;
   }
   if( joystick.left() ){
     velocity.x = -BALL_SPEED;
   }else if( joystick.right() ){
     velocity.x = BALL_SPEED;
-  }else{
-    velocity.x = 0;
+  }
+}
+function update(){
+  if( jump_pressed && velocity.y == 0){
+    velocity.y = 3.4 * BALL_SPEED;
+    jump_pressed = false;
   }
   sphere.position.add(velocity);
   if( sphere.position.y > 0)

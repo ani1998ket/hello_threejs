@@ -35,6 +35,7 @@ function init(){
   document.addEventListener('keydown', keydownHandler);
   document.addEventListener('keyup', keyupHandler);
   document.addEventListener('touchstart', touchdownHandler);
+  document.addEventListener('touchmove', touchmoveHandler);
   joystick = new VirtualJoystick();
   window.addEventListener('resize', function(){
     let width  = window.innerWidth;
