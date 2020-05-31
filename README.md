@@ -1,7 +1,7 @@
-#visit link
+# visit link
 https://ani1998ket.github.io/hello_threejs/
 
-##controls
+## controls
 WASD - motion
 Space - jump
 
